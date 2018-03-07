@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p {{pkg.svc_var_path}}/logs {{pkg.svc_var_path}}/run {{pkg.svc_var_path}}/cache
+chown {{pkg.svc_group}}:{{pkg.svc_group}} {{pkg.svc_var_path}}/logs {{pkg.svc_var_path}}/run {{pkg.svc_var_path}}/cache
+squid -z
